@@ -1,0 +1,17 @@
+button {
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: darkblue;
+  }
+  &:disabled {
+    background-color: lightgray;
+    color: gray;
+    cursor: not-allowed;
+  }
+}
