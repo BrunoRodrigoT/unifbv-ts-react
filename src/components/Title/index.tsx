@@ -9,7 +9,7 @@ function Title({ children, style }: Props) {
   return (
     <h1
       style={{
-        color: "red",
+        color: "#222",
         fontSize: "4rem",
         textAlign: "center",
         ...style,
