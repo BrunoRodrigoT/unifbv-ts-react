@@ -1,10 +1,12 @@
 import React from "react";
-import { Title, Button, Input } from "./components";
+import { Title, Button, Input } from "../../components";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigate } from "react-router-dom";
 
-function App() {
+export default function Home() {
+  const navigate = useNavigate();
   const validations = z.object({
     name: z.string().min(3, "O nome deve conter ao menos 3 caracteres"),
     title: z.string().min(3, "O título deve conter ao menos 3 caracteres"),
@@ -76,6 +78,8 @@ function App() {
           margin: "0 auto",
         }}
       >
+        <Button onClick={() => navigate("/about")}>Sobre</Button>
+        <a href="/about">Sobre</a>
         <Input
           label="Nome"
           placeholder="Name"
@@ -130,5 +134,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

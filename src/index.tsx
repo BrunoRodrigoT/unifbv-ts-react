@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import "./global/styles/globals.css";
 import { TodoProvider } from "./contexts/ToDoContext";
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -10,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <TodoProvider>
-      <App />
+      <RouterProvider router={routes} />
     </TodoProvider>
   </React.StrictMode>
 );
