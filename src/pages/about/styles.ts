@@ -27,5 +27,5 @@ export const ContentCards = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 `
