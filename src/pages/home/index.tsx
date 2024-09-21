@@ -78,8 +78,10 @@ export default function Home() {
           margin: "0 auto",
         }}
       >
-        <Button onClick={() => navigate("/about")}>Sobre</Button>
-        <a href="/about">Sobre</a>
+        <div style={{ display: "flex", gap: "1rem", width: "100%" }}>
+          <Button onClick={() => navigate("/about")}>Sobre</Button>
+          <Button onClick={() => navigate("/via-cep")}>Via Cep</Button>
+        </div>
         <Input
           label="Nome"
           placeholder="Name"
